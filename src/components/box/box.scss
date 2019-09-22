@@ -1,0 +1,204 @@
+$body--Background: #f0f1f1;
+$icon-rocket--Color: #4f5d75;
+$shadow-line--Color: rgb(54, 54, 54);
+$face-linear--Color: linear-gradient(to top, #005aa7, #fffde4);
+$face-lid--color: rgb(75, 153, 184);
+.page {
+	display: flex;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+	height: 100vh;
+	text-align: center;
+}
+.container {
+	margin-top: -200px;
+	transform: scale(0.5);
+}
+
+.box-wrapper {
+	perspective: 800px;
+	perspective-origin: 50% 100px;
+}
+
+.box-faces {
+	position: relative;
+	width: 200px;
+	transform-style: preserve-3d;
+}
+.box-faces p {
+	padding: 40px 0;
+}
+.box-face {
+	//outline: 1px solid #999;
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	opacity: 0.98;
+	box-shadow: inset 0px 0px 2px #555;
+	background: $face-linear--Color;
+	// background: url(https://ohmy.disney.com/wp-content/uploads/2015/01/Clouds_Toy-Story.jpg);
+	// background-size: cover;
+}
+.box-face-lid {
+	//display: none;
+	//outline: 1px solid #999;
+	position: absolute;
+	width: 200px;
+	height: 60px;
+	opacity: 0.98;
+	box-shadow: inset 0px 0px 2px #555;
+	background: $face-lid--color;
+}
+
+.box-face--is-back {
+	border-bottom: 0.1px solid $shadow-line--Color;
+	transform: translateZ(-100px) rotateY(180deg);
+}
+.box-face--is-right {
+	border-bottom: 0.1px solid $shadow-line--Color;
+	transform: rotateY(-270deg) translateX(100px);
+	transform-origin: top right;
+}
+.box-face--is-back-lid {
+	transform: translateZ(-100px) rotateY(180deg) rotateX(100deg) translateZ(29px) translateY(35px);
+}
+.box-face--is-right-lid {
+	transform: rotateY(-270deg) translateX(100px) rotateX(100deg);
+	transform-origin: top right;
+}
+
+.box-face--is-top {
+	transform: rotateX(-90deg) translateY(-100px);
+	transform-origin: top center;
+}
+.box-face--is-bottom {
+	transform: rotateX(90deg) translateY(100px);
+	transform-origin: bottom center;
+}
+.box-face--is-left {
+	border-bottom: 0.1px solid $shadow-line--Color;
+	transform: rotateY(270deg) translateX(-100px);
+	transform-origin: center left;
+}
+.box-face--is-left-lid {
+	transform: rotateY(270deg) translateX(-100px) translateY(-35px) translateZ(27px) rotateX(100deg);
+	transform-origin: center left;
+}
+.box-face--is-front {
+	border-bottom: 0.1px solid $shadow-line--Color;
+	transform: translateZ(100px);
+}
+.box-face--is-front-lid {
+	transform: translateZ(100px) translateY(-35px) rotateX(100deg) translateY(29px) translateZ(-5px);
+}
+@keyframes spin {
+	from {
+		transform: rotateY(0);
+	}
+	to {
+		transform: rotateY(360deg);
+	}
+}
+.box-faces,
+.shadow {
+	//z-index: 99;
+	transform: rotateY(60deg);
+	// animation: spin 25s infinite linear;
+}
+.icon-rocket {
+	color: $icon-rocket--Color;
+}
+.shadow-wrapper {
+	perspective: 800px;
+	perspective-origin: 50% 100px; /* -webkit-perspective: 800px;
+  -webkit-perspective-origin: 50% 100px; */
+}
+.shadow {
+	position: relative;
+	width: 200px;
+	transform-style: preserve-3d;
+}
+.shadow div {
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	top: 0px;
+	opacity: 0.98;
+	box-shadow: -10px 10px 150px #000;
+	transform: rotateX(90deg) translateY(100px);
+	transform-origin: bottom center;
+}
+.soldiers {
+	position: absolute;
+	top: 145%;
+	right: 0;
+	//margin-right: -14vw;
+	.text {
+		color: transparent;
+		//rgb(1, 149, 70);
+		text-shadow: 0 0 0.5px #000;
+	}
+	.soldier-box {
+		height: auto;
+		width: 30px;
+		height: auto;
+		justify-content: center;
+		.s-shadow {
+			z-index: 1;
+			margin-top: -7px;
+			opacity: 0.5;
+			background: rgba(110, 110, 110, 0.6);
+			border: none;
+			width: 30px;
+			height: 7px;
+			box-shadow: 0px 0px 10px rgb(50, 50, 50);
+			border-radius: 50%;
+		}
+	}
+	.soldier {
+		z-index: 2;
+		width: auto;
+		//	transform: rotateY(180deg);
+		transform-origin: bottom center;
+	}
+}
+.soldier {
+	animation: walk 1s infinite ease-in-out;
+}
+.soldier:nth-child(1) {
+	animation-delay: 0.1s;
+}
+.soldier:nth-child(2) {
+	animation-delay: 0.9s;
+}
+.soldier:nth-child(3) {
+	animation-delay: 0.4s;
+}
+.soldier:nth-child(4) {
+	animation-delay: 0.7s;
+}
+
+@keyframes walk {
+	0% {
+		transform: rotate(0deg);
+		margin-bottom: 0px;
+	}
+	25% {
+		transform: rotate(-15deg);
+		margin-bottom: 3px;
+	}
+	50% {
+		transform: rotate(0deg);
+		margin-bottom: 0px;
+	}
+	75% {
+		transform: rotate(15deg);
+		margin-bottom: 3px;
+	}
+	100% {
+		transform: rotate(0deg);
+		//	transform: rotateY(180deg);
+		margin-bottom: 0px;
+	}
+}

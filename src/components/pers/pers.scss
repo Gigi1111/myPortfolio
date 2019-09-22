@@ -1,0 +1,210 @@
+html {
+	box-sizing: border-box;
+	font-family: Arial, sans-serif;
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+html,
+body {
+	overflow-x: hidden;
+}
+.row {
+	display: flex;
+	flex-wrap: wrap;
+}
+.cover {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.section--featured {
+	height: 1200px;
+	background-color: #eaeaea;
+	position: relative;
+}
+.section--featured .row,
+.section--featured .column,
+.section--featured .ItemCard,
+.section--featured .ItemCard__thumb {
+	backface-visibility: hidden;
+	transform-style: preserve-3d;
+}
+.section--featured .row {
+	position: absolute;
+	top: -400px;
+	right: 60vh;
+	width: 960px;
+	margin-left: 1000px;
+	transform: rotateX(60deg) rotateZ(-45deg) scale(1.2);
+	justify-content: flex-end;
+}
+@media screen and (max-width: 750px) {
+	.section--featured .row {
+		top: -500px;
+		right: 0vh;
+		transform: rotateX(60deg) rotateZ(-45deg) scale(0.5);
+	}
+
+	#content,
+	#content1 {
+		margin-left: 30px;
+		//font-size: 0.6em;
+		//	border: 1px solid black;
+	}
+	#intro1 {
+		//margin-top: -300px;
+		//	border: 1px solid orange;
+	}
+}
+
+@media screen and (max-width: 850px) {
+	.section--featured .row {
+		top: -500px;
+		left: -1500px;
+		right: 0vh;
+		transform: rotateX(60deg) rotateZ(-45deg) scale(0.9);
+	}
+
+	#content {
+		margin-left: 30px;
+		font-size: 0.8em;
+	}
+	#intro1 {
+	}
+}
+@media screen and (min-width: 860px) {
+	.section--featured .row {
+		top: -450px;
+		right: 90vh;
+	}
+}
+@media screen and (min-width: 1000px) {
+	.section--featured .row {
+		right: 110vh;
+	}
+}
+.section--featured .column {
+	width: 50%;
+	max-width: 50%;
+	padding: 20px;
+	flex: 1 1 50%;
+}
+.section--featured .shadow {
+	display: block;
+	transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+	opacity: .9;
+	background-color: rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+	animation: 1.5s cubic-bezier(0.165, 0.84, 0.44, 1) shadow 2;
+}
+.section--featured .ItemCard__thumb img {
+	position: relative;
+	z-index: 1;
+	transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+	transform: translate3d(0, 0, 20px);
+	//	animation: 1.5s cubic-bezier(0.165, 0.84, 0.44, 1) levitate 2;
+}
+@media screen and (min-width: 640px) {
+	.column {
+		width: 320px;
+		max-width: 50%;
+		flex: 1 1 320px;
+	}
+}
+@media screen and (min-width: 940px) {
+	.column {
+		width: 313.33333333px;
+		max-width: 33.333%;
+		flex: 1 1 313.33333333px;
+	}
+}
+.ItemCard {
+	position: relative;
+	max-width: 510px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.ItemCard__thumb {
+	position: relative;
+	padding: 0;
+}
+.ItemCard__thumb img {
+	display: block;
+	cursor: pointer;
+}
+.section--featured .column:hover .ItemCard__dest {
+	z-index: 10;
+}
+.section--featured .column:hover .ItemCard__thumb img {
+	//transform: translate3d(0, 0px, 100px) scale(1.2);rotateX(-80deg)rotateY(-20deg) rotateX(-50deg)
+	transform: translate3d(0px, 0px, 30px) scale(1.1) rotateX(-50deg);
+	transform-origin: center bottom;
+}
+.section--featured .column:hover .ItemCard__thumb .shadow {
+	opacity: .6;
+	background-color: rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 10px 6px rgba(0, 0, 0, 0.1);
+}
+@keyframes levitate {
+	0% {
+		-webkit-transform: translate3d(0, 0, 20px);
+		transform: translate3d(0, 0, 20px);
+	}
+	50% {
+		-webkit-transform: translate3d(0, 0, 1px);
+		transform: translate3d(0, 0, 1px);
+	}
+	100% {
+		-webkit-transform: translate3d(0, 0, 20px);
+		transform: translate3d(0, 0, 20px);
+	}
+}
+@keyframes shadow {
+	0% {
+		opacity: .9;
+		background-color: rgba(0, 0, 0, 0.1);
+		box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+	}
+	50% {
+		opacity: 1;
+		background-color: rgba(0, 0, 0, 0.18);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.18);
+	}
+	100% {
+		opacity: .9;
+		background-color: rgba(0, 0, 0, 0.1);
+		box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+	}
+}
+.intro {
+	opacity: 1;
+	font-size: 20px;
+	p {
+		padding-top: 15px;
+	}
+	transition: opacity 1.5s ease-in-out;
+}
+
+.pic {
+	margin-right: 20px;
+	border-radius: 100%;
+	background: url("https://i.ibb.co/x23Qcn1/me.png");
+	height: 150px;
+	width: 150px;
+	background-size: cover;
+	transition: v;
+}
+.portfolioTitle {
+	color: pink !important;
+}

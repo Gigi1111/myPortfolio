@@ -1,0 +1,23 @@
+nav {
+	overflow: hidden;
+	//border-bottom: 1px solid rgb(12, 13, 14);
+	z-index: 54;
+	padding: 5px 20px;
+	position: fixed;
+	background: transparent;
+	font-size: 50px !important;
+	a:active,
+	a:focus {
+		outline: 0;
+		border: none;
+		-moz-outline-style: none;
+	}
+	a {
+		width: auto;
+	}
+}
+.link {
+	color: white !important;
+	font-weight: bolder;
+	text-shadow: 0 0 1px black;
+}

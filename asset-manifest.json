@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.caea95c1.chunk.css",
+    "main.js": "/portfolio/static/js/main.e02dd4eb.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.e02dd4eb.chunk.js.map",
+    "runtime~main.js": "/portfolio/static/js/runtime~main.0abbd2dd.js",
+    "runtime~main.js.map": "/portfolio/static/js/runtime~main.0abbd2dd.js.map",
+    "static/css/2.31dafeb2.chunk.css": "/portfolio/static/css/2.31dafeb2.chunk.css",
+    "static/js/2.1a26d31c.chunk.js": "/portfolio/static/js/2.1a26d31c.chunk.js",
+    "static/js/2.1a26d31c.chunk.js.map": "/portfolio/static/js/2.1a26d31c.chunk.js.map",
+    "index.html": "/portfolio/index.html",
+    "precache-manifest.c315561cf574268e6fe421c82ff50fae.js": "/portfolio/precache-manifest.c315561cf574268e6fe421c82ff50fae.js",
+    "service-worker.js": "/portfolio/service-worker.js",
+    "static/css/2.31dafeb2.chunk.css.map": "/portfolio/static/css/2.31dafeb2.chunk.css.map",
+    "static/css/main.caea95c1.chunk.css.map": "/portfolio/static/css/main.caea95c1.chunk.css.map",
+    "static/media/1down.png": "/portfolio/static/media/1down.e3f6e15a.png",
+    "static/media/2down.png": "/portfolio/static/media/2down.e8746e49.png",
+    "static/media/3down.png": "/portfolio/static/media/3down.44902859.png",
+    "static/media/arrow.png": "/portfolio/static/media/arrow.7d8becbb.png",
+    "static/media/education.png": "/portfolio/static/media/education.1044ebeb.png",
+    "static/media/experience.png": "/portfolio/static/media/experience.6262f64b.png",
+    "static/media/me.jpg": "/portfolio/static/media/me.11b202e5.jpg",
+    "static/media/skills.png": "/portfolio/static/media/skills.8fd1924b.png",
+    "static/media/tape1.png": "/portfolio/static/media/tape1.c5588753.png",
+    "static/media/tape2.png": "/portfolio/static/media/tape2.fae85455.png",
+    "static/media/up1.png": "/portfolio/static/media/up1.57683ed8.png",
+    "static/media/up2.png": "/portfolio/static/media/up2.8fc581fd.png",
+    "static/media/up3.png": "/portfolio/static/media/up3.87f0b5d3.png",
+    "static/media/zipper.png": "/portfolio/static/media/zipper.edc5dc17.png"
+  }
+}
